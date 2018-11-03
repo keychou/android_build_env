@@ -1,0 +1,33 @@
+#! /usr/bin/expect
+set timeout 1000
+set server1 "s1"
+set server2 "s2"
+set cts1 "cts1"
+set cts2 "cts2"
+set servername [lindex $argv 0]
+spawn echo "---try connect to $servername---"
+
+if {$servername == $server1} {
+   set hostname "klein@192.168.26.245"
+   set password "klein"
+} 
+
+if {$servername == $server2} {
+   set hostname "klein@192.168.26.32"
+   set password "123456"
+} 
+
+if {$servername == $cts1} {
+   set hostname "quectel@192.168.26.177"
+   set password "321"
+} 
+
+if {$servername == $cts2} {
+   set hostname "quectel@192.168.26.67"
+   set password "321"
+}
+
+spawn ssh $hostname
+expect "password:"
+send "$password\n"
+interact
