@@ -1,0 +1,9 @@
+sudo useradd -r -m -s /bin/bash <username>
+sudo passwd <username>
+
+sudo gedit /etc/sudoers
+
+# User privilege specification
+root	ALL=(ALL:ALL) ALL
+<username1>	ALL=(ALL:ALL) ALL
+<username2>	ALL=(ALL:ALL) ALL
