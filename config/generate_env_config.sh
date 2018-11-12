@@ -7,13 +7,14 @@ echo "LOCAL_PATH="$LOCAL_PATH
 
 #--------create soft link for aapt
 echo "sudo ln -s $LOCAL_PATH/runtime/build-tools/27.0.3/aapt /usr/bin/aapt"
-sudo ln -s $LOCAL_PATH/runtime/build-tools/27.0.3/aapt /usr/bin/aapt
+sudo ln -s $LOCAL_PATH/runtime/platform-tools/adb /usr/bin/adb
+sudo ln -s $LOCAL_PATH/runtime/platform-tools/fastboot /usr/bin/fastboot
 
-#echo "           "
-#echo "copy and append following configs to /etc/profile OR ~/.bashrc if needed"
-#echo "*******************************************************************************"
-#echo "export ANDROID_BUILD_ENV_PATH=$LOCAL_PATH"
-#echo "export ANDROID_PLATFORM_TOOLS=\$ANDROID_BUILD_ENV_PATH/runtime/platform-tools"
-#echo "export ANDROID_BUILD_TOOLS=\$ANDROID_BUILD_ENV_PATH/runtime/build-tools/27.0.3"
-#echo "export PATH=\$ANDROID_BUILD_ENV_PATH/bin:\$ANDROID_BUILD_TOOLS:\$ANDROID_PLATFORM_TOOLS:\$PATH"
-#echo "*******************************************************************************"
+echo "           "
+echo "copy and append following configs to /etc/profile OR ~/.bashrc if needed"
+echo "*******************************************************************************"
+echo "export ANDROID_BUILD_ENV_PATH=$LOCAL_PATH"
+echo "export ANDROID_PLATFORM_TOOLS=\$ANDROID_BUILD_ENV_PATH/runtime/platform-tools"
+echo "export ANDROID_BUILD_TOOLS=\$ANDROID_BUILD_ENV_PATH/runtime/build-tools/27.0.3"
+echo "export PATH=\$PATH:\$ANDROID_BUILD_ENV_PATH/bin:\$ANDROID_BUILD_TOOLS:\$ANDROID_PLATFORM_TOOLS"
+echo "*******************************************************************************"
