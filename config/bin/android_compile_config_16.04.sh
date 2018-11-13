@@ -8,3 +8,5 @@ sudo apt-get install android-tools-adb android-tools-fastboot
 #install ssh server in order to enable ssh login and scp
 sudo apt-get install openssh-server openssh-client
 
+#install python
+sudo apt-get install python-dev python-protobuf protobuf-compiler python-virtualenv python-pip
