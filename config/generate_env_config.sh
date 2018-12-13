@@ -17,6 +17,9 @@ echo "export ANDROID_BUILD_ENV_PATH=$LOCAL_PATH"
 echo "export ANDROID_PLATFORM_TOOLS=\$ANDROID_BUILD_ENV_PATH/runtime/platform-tools"
 echo "export ANDROID_BUILD_TOOLS=\$ANDROID_BUILD_ENV_PATH/runtime/build-tools/27.0.3"
 echo "export PATH=\$PATH:\$ANDROID_BUILD_ENV_PATH/bin:\$ANDROID_BUILD_TOOLS:\$ANDROID_PLATFORM_TOOLS"
+
+#set default out dir when build android source code
+#echo "export OUT_DIR_COMMON_BASE=output"
 #---fix compile error of android7.1.2 on ubuntu18.04
 echo "export LC_ALL=C"
 echo "*******************************************************************************"
