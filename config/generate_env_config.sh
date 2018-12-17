@@ -6,7 +6,7 @@ echo "LOCAL_PATH="$LOCAL_PATH
 sudo cp -rf $LOCAL_PATH/70-persistent-net.rules /etc/udev/rules.d/
 
 #--------create soft link for aapt
-echo "sudo ln -s $LOCAL_PATH/runtime/build-tools/27.0.3/aapt /usr/bin/aapt"
+sudo ln -s $LOCAL_PATH/runtime/build-tools/27.0.3/aapt /usr/bin/aapt
 sudo ln -s $LOCAL_PATH/runtime/platform-tools/adb /usr/bin/adb
 sudo ln -s $LOCAL_PATH/runtime/platform-tools/fastboot /usr/bin/fastboot
 
