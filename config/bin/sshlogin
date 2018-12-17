@@ -18,13 +18,13 @@ if {$servername == $server2} {
 } 
 
 if {$servername == $cts1} {
-   set hostname "quectel@192.168.26.177"
-   set password "321"
+   set hostname "framework-compile-1@172.18.105.104"
+   set password "smart"
 } 
 
 if {$servername == $cts2} {
-   set hostname "quectel@192.168.26.67"
-   set password "321"
+   set hostname "klein@172.18.105.217"
+   set password "10089"
 }
 
 spawn ssh $hostname

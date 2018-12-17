@@ -12,7 +12,7 @@ adb reboot bootloader
 count=1
 while [ "$#" -ge "1" ];do
     echo "================try to flash $count/$1================"
-    sudo $fastboot flash $1 out/target/product/$device/$1.img
+    sudo $fastboot flash $1 target/product/$device/$1.img
     let count=count+1
     shift
 done
