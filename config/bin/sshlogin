@@ -8,7 +8,7 @@ set servername [lindex $argv 0]
 spawn echo "---try connect to $servername---"
 
 if {$servername == $server1} {
-   set hostname "klein@192.168.26.245"
+   set hostname "klein@172.18.104.46"
    set password "klein"
 } 
 
