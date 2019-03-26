@@ -1,2 +1,23 @@
 SourceInsight3:
 SI3US-241109-94280
+
+2. teamviewer can not be install successfully after install jdk1.7:
+
+Selecting previously unselected package teamviewer:i386.
+(Reading database ... 168801 files and directories currently installed.)
+Preparing to unpack teamviewer_i386.deb ...
+Unpacking teamviewer:i386 (12.0.137452) ...
+dpkg: dependency problems prevent configuration of teamviewer:i386:
+ teamviewer:i386 depends on libfontconfig1.
+ teamviewer:i386 depends on libjpeg62.
+
+dpkg: error processing package teamviewer:i386 (--install):
+ dependency problems - leaving unconfigured
+Processing triggers for gnome-menus (3.13.3-11ubuntu1) ...
+Processing triggers for desktop-file-utils (0.23-1ubuntu3.18.04.1) ...
+Processing triggers for mime-support (3.60ubuntu1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Errors were encountered while processing:
+ teamviewer:i386
+
+3.wine can not be install successfully after install openssl1.0.1 ,it need > openssl1.1.0

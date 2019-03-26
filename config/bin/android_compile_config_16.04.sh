@@ -18,6 +18,9 @@ sudo apt-get install python-dev python-protobuf protobuf-compiler python-virtual
 #install libssl-dev to fix such error "fatal error: openssl/opensslv.h: No such file or directory"
 sudo apt-get install libssl-dev
 
+#install audit2allow
+sudo apt-get install policycoreutils-python-utils
+
 git config --global user.email "klein.zhou@quectel.com"
 git config --global user.name "klein.zhou"
 git config --global core.editor gedit

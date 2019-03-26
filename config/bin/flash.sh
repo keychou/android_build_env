@@ -3,19 +3,35 @@ echo "arguments total: $#"
 echo "target device: $1"
 echo "target images: $2 $3 $4"
 
-fastboot="out/host/linux-x86/bin/fastboot"
-device=$1
-shift
-
-adb reboot bootloader
-
-count=1
-while [ "$#" -ge "1" ];do
-    echo "================try to flash $count/$1================"
-    sudo $fastboot flash $1 target/product/$device/$1.img
-    let count=count+1
+if [ "$1" == "." ];then
+    echo "flash current dir"
+    adb reboot bootloader
     shift
-done
+
+    count=1
+    while [ "$#" -ge "1" ];do
+        echo "================try to flash $count/$1================"
+        sudo fastboot flash $1 $1.img
+        let count=count+1
+        shift
+    done
+
+else
+    echo "flash target dir"
+    fastboot="out/host/linux-x86/bin/fastboot"
+    device=$1
+    shift
+
+    adb reboot bootloader
+
+    count=1
+    while [ "$#" -ge "1" ];do
+        echo "================try to flash $count/$1================"
+        sudo $fastboot flash $1 target/product/$device/$1.img
+        let count=count+1
+        shift
+    done
+fi
 
 sudo $fastboot reboot
 
