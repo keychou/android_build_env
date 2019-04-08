@@ -21,5 +21,10 @@ echo "export PATH=\$PATH:\$ANDROID_BUILD_ENV_PATH/bin:\$ANDROID_BUILD_TOOLS:\$AN
 #set default out dir when build android source code
 #echo "export OUT_DIR_COMMON_BASE=output"
 #---fix compile error of android7.1.2 on ubuntu18.04
+
+#FAILED: /bin/bash -c "prebuilts/misc/linux-x86/flex/flex-2.5.39 -oout/host/linux-x86/obj/STATIC_LIBRARIES/libaidl-common_intermediates/aidl_language_l.cpp system/tools/aidl/aidl_language_l.ll"
+#flex-2.5.39: loadlocale.c:130: _nl_intern_locale_data: Assertion `cnt < (sizeof #(_nl_value_type_LC_TIME) / sizeof (_nl_value_type_LC_TIME[0]))' failed.
+#Aborted (core dumped)
+
 echo "export LC_ALL=C"
 echo "*******************************************************************************"
