@@ -68,5 +68,10 @@ $ cat etc/gerrit.config
 "
 
 
+echo "java -jar /home/gerrit/install/bin/gerrit.war reindex --index changes
+java -jar /home/gerrit/install/bin/gerrit.war reindex --index groups
+java -jar /home/gerrit/install/bin/gerrit.war reindex --index accounts"
+
+
 #https://luomuxiaoxiao.com/?p=595
 #https://blog.csdn.net/u013377887/article/details/79826348
